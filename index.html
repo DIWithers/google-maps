@@ -14,17 +14,37 @@
 
 	<div id="map"></div>
 
-	<table ng-table="cityTable" show-filter="true" class="cityTable">
-		<tr>
-			<th colspan="3">Cities By Population</th>
-		</tr>
-		<tr data-ng-repeat="city in cities track by $index">
+	<div class="rightTable">
+		<form ng-submit="updateMarkers()">
+			<input id="filter-input" ng-model="citiesFilter" type="text">
+			<input type="submit" value="Update the Map"> <br>
+			<label>
+				Points of Interest
+				<select ng-model="pointsOfInterest" ng-options="place for place in placesTypes"></select>
+			</label>
+
+			<table ng-table="cityTable" show-filter="true">
+			<tr>
+				<th colspan="4">Cities By Population</th>
+			</tr>
+
+			<tr ng-repeat="city in (filteredCities = (cities |filter: citiesFilter)) track by $index" class="tableRow">
+				
+				<td id="icon">{{city.yearRank}}</td>
+				<td title="cityName"><a href="" ng-click="triggerClick($index)">{{city.cityName}}</a></td>
+				<td>
+					<button type="submit" ng-click="getDirections(city.lat, city.lon)" ng-model="directions">Get Directions</button>
+				</td>
+				<td>
+					<button type="submit" ng-click="zoomToCity(city.lat, city.lon)">Zoom to City</button>
+				</td>
 			
-			<td id="icon">{{city.yearRank}}</td>
-			<td data-title="cityName" sortable="'name'" filter="{'name' : 'text'}"><a href="" ng-click="triggerClick($index)">{{city.cityName}}</a></td>
-		
-		</tr>
-	</table>
+			</tr>
+		</table>
+		</form>
+	</div>
+
+	<div ng-show="directions=true" id="listWindow"><button ng-click="toggle()">Clear</button></div>
 
 </body>
 </html>

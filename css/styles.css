@@ -48,48 +48,98 @@
   border-radius: 10px;
 }
 
-/* line 12, ../compass/sass/styles.scss */
+/* line 8, ../compass/sass/styles.scss */
+body {
+  background-color: #A3CCFF;
+}
+
+/* line 13, ../compass/sass/styles.scss */
 #map {
   height: 99vh;
   width: 75%;
   float: left;
 }
 
-/* line 17, ../compass/sass/styles.scss */
+/* line 18, ../compass/sass/styles.scss */
 table {
-  background-color: #A3CCFF;
   height: 50%;
 }
 
 /* line 22, ../compass/sass/styles.scss */
-.cityTable {
+.rightTable {
   opacity: 100%;
   border: 1px solid black;
-  height: 25%;
-  width: 25%;
+  height: 970px;
+  width: 24%;
   overflow: scroll;
+  box-sizing: border-box;
 }
 
-/* line 29, ../compass/sass/styles.scss */
+/* line 30, ../compass/sass/styles.scss */
 th {
   font-size: 40px;
   padding: 10px 0px 10px 0px;
   height: 40px;
-  text-align: center;
+  text-align: left;
   background-color: #5f83af;
 }
 
-/* line 39, ../compass/sass/styles.scss */
+/* line 40, ../compass/sass/styles.scss */
 td {
   font-size: 20px;
   padding: 5px;
 }
 
-/* line 44, ../compass/sass/styles.scss */
+/* line 46, ../compass/sass/styles.scss */
 #icon {
   background-color: white;
   border-radius: 50px;
   text-align: center;
   width: 25px;
-  margin-right: 20px;
+}
+
+/* line 53, ../compass/sass/styles.scss */
+#map {
+  margin-left: 15px;
+}
+
+/* line 56, ../compass/sass/styles.scss */
+.tableRow {
+  width: 50px;
+}
+
+/* line 59, ../compass/sass/styles.scss */
+input {
+  height: 25px;
+  font-size: 15px;
+  font-style: italic;
+}
+
+/* line 64, ../compass/sass/styles.scss */
+#poi {
+  font-size: 20px;
+}
+
+/* line 67, ../compass/sass/styles.scss */
+#listWindow {
+  width: 25%;
+  overflow: scroll;
+  height: 500px;
+  position: absolute;
+  left: 20px;
+  bottom: 25px;
+  background-color: rgba(204, 204, 204, 0.7);
+}
+
+/* line 77, ../compass/sass/styles.scss */
+#listWindow td {
+  font-size: 15px;
+  border: 1px solid black;
+  font-weight: bolder;
+}
+
+/* line 82, ../compass/sass/styles.scss */
+#b {
+  position: absolute;
+  bottom: 200px;
 }

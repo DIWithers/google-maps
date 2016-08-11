@@ -6,6 +6,7 @@
 @import "layout/footer";
 
 body {
+	background-color: #A3CCFF;
 
 }
 
@@ -15,22 +16,22 @@ body {
 	float: left;
 }
 table {
-	background-color: #A3CCFF;
 	height: 50%;
 	
 }
-.cityTable {
+.rightTable {
 	opacity: 100%;
 	border: 1px solid black;
-	height: 25%;
-	width: 25%;
+	height: 970px;
+	width: 24%;
 	overflow: scroll;
+	box-sizing: border-box;
 }
 th {
 	font-size: 40px;
 	padding: 10px 0px 10px 0px;
 	height: 40px;
-	text-align: center;
+	text-align: left;
 	background-color: #5f83af;
 
 	
@@ -39,6 +40,7 @@ th {
 td {
 	font-size: 20px;
 	padding: 5px;
+
 	
 }
 #icon {
@@ -46,5 +48,38 @@ td {
 	border-radius: 50px;
 	text-align: center;
 	width: 25px;
-	margin-right: 20px;
+	
+}
+#map {
+	margin-left: 15px;
+}
+.tableRow {
+	width: 50px;
+}
+input {
+	height: 25px;
+	font-size: 15px;
+	font-style: italic;
+}
+#poi {
+	font-size: 20px;
+}
+#listWindow {
+	width: 25%;
+	overflow: scroll;
+	height: 500px;
+	position: absolute;
+	left: 20px;
+	bottom: 25px;
+	background-color: rgba(204, 204, 204, .7);
+	
+}
+#listWindow td {
+		font-size: 15px;
+		border: 1px solid black;
+		font-weight: bolder;
+	}
+#b {
+	position: absolute;
+	bottom: 200px;
 }
