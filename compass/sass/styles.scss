@@ -1,0 +1,50 @@
+//This is the main page for scss
+
+@import "configs/variables";
+@import "components/misc";
+@import "layout/header";
+@import "layout/footer";
+
+body {
+
+}
+
+#map {
+	height: 99vh;
+	width: 75%;
+	float: left;
+}
+table {
+	background-color: #A3CCFF;
+	height: 50%;
+	
+}
+.cityTable {
+	opacity: 100%;
+	border: 1px solid black;
+	height: 25%;
+	width: 25%;
+	overflow: scroll;
+}
+th {
+	font-size: 40px;
+	padding: 10px 0px 10px 0px;
+	height: 40px;
+	text-align: center;
+	background-color: #5f83af;
+
+	
+
+}
+td {
+	font-size: 20px;
+	padding: 5px;
+	
+}
+#icon {
+	background-color: white;
+	border-radius: 50px;
+	text-align: center;
+	width: 25px;
+	margin-right: 20px;
+}

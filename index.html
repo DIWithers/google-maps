@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app = "googleMapsApp">
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="https://maps.googleapis.com/maps/api/js?libraries=places&v=3.exp&signed_in=true&key=AIzaSyDyOX5Hn3vZ1egpC9T7g-8cNz_1zZmVazI"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?libraries=places&v=3.exp&signed_in=true"></script> -->
+	<script type="text/javascript" src="cities.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
+
+</head>
+<body ng-controller = "googleMapsController">
+
+	<div id="map"></div>
+
+	<table ng-table="cityTable" show-filter="true" class="cityTable">
+		<tr>
+			<th colspan="3">Cities By Population</th>
+		</tr>
+		<tr data-ng-repeat="city in cities track by $index">
+			
+			<td id="icon">{{city.yearRank}}</td>
+			<td data-title="cityName" sortable="'name'" filter="{'name' : 'text'}"><a href="" ng-click="triggerClick($index)">{{city.cityName}}</a></td>
+		
+		</tr>
+	</table>
+
+</body>
+</html>
